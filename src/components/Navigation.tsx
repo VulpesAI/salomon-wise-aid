@@ -43,10 +43,17 @@ const Navigation = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
+            <Button 
+              variant="ghost" 
+              className="text-muted-foreground hover:text-foreground"
+              onClick={() => alert('Funcionalidad de login próximamente')}
+            >
               Iniciar Sesión
             </Button>
-            <Button className="bg-gradient-primary hover:opacity-90">
+            <Button 
+              className="bg-gradient-primary hover:opacity-90"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Probar Gratis
             </Button>
           </div>
@@ -77,10 +84,23 @@ const Navigation = () => {
                 Contacto
               </a>
               <div className="pt-4 space-y-2">
-                <Button variant="ghost" className="w-full justify-start">
+                <Button 
+                  variant="ghost" 
+                  className="w-full justify-start"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    alert('Funcionalidad de login próximamente');
+                  }}
+                >
                   Iniciar Sesión
                 </Button>
-                <Button className="w-full bg-gradient-primary hover:opacity-90">
+                <Button 
+                  className="w-full bg-gradient-primary hover:opacity-90"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
                   Probar Gratis
                 </Button>
               </div>
